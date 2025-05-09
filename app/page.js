@@ -18,7 +18,7 @@ useEffect(() => {
         console.log("Clerk Token:", token); // Log token value for debugging
         
         if (token) {
-          const response = await fetch('/api/auth', {
+          const response = await axios.get('/api/auth', {
             method: 'GET',
             headers: {
               Authorization: `Bearer ${token}`, // Pass token in header
